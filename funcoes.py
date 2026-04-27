@@ -30,3 +30,12 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
         else:
             nova_lista_r.append(atual)
     return([nova_lista_r, nova_lista_e])
+
+def calcula_pontos_regra_simples(lista_inteiros):
+    resultado = {1:0,2:0,3:0,4:0,5:0,6:0}
+    for face in lista_inteiros:
+        if face in resultado:
+            resultado[face] += (1 * face)
+    return resultado
+
+        
