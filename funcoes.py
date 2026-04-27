@@ -38,4 +38,8 @@ def calcula_pontos_regra_simples(lista_inteiros):
             resultado[face] += (1 * face)
     return resultado
 
-        
+def calcula_pontos_soma(dados):
+    soma = 0
+    for n in dados:
+        soma += n
+    return soma
