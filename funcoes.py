@@ -44,6 +44,21 @@ def calcula_pontos_soma(dados):
         soma += n
     return soma
 
+def calcula_pontos_sequencia_alta(dados):
+    faces_unicas = []
+    for d in dados:
+        if d not in faces_unicas:
+            faces_unicas.append(d)
+    sequencias = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]
+    for seq in sequencias:
+        encontrou = True
+        for n in seq:
+            if n not in faces_unicas:
+                encontrou = False
+        if encontrou:
+            return 30
+    return 0
+
 def calcula_pontos_sequencia_baixa(dados):
     faces_unicas = []
     for d in dados:
