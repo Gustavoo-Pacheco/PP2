@@ -91,3 +91,24 @@ def calcula_pontos_full_house(dados):
         return total
     else:
         return 0
+    
+def calcula_pontos_quadra(dados):
+    contagens = {}
+    for d in dados:
+        if d in contagens:
+            contagens[d] += 1
+        else:
+            contagens[d] = 1
+    
+    quadra = False
+    for qtd in contagens.values():
+        if qtd >= 4:
+            quadra = True
+    
+    if quadra:
+        total = 0
+        for d in dados:
+            total += d
+        return total
+    
+    return 0
