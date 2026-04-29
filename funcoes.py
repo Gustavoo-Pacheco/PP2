@@ -110,5 +110,19 @@ def calcula_pontos_quadra(dados):
         for d in dados:
             total += d
         return total
-    
+
+    return 0
+
+def calcula_pontos_quina(dados):
+    contagens = {}
+    for d in dados:
+        if d in contagens:
+            contagens[d] += 1
+        else:
+            contagens[d] = 1
+
+    for qtd in contagens.values():
+        if qtd >= 5:
+            return 50
+
     return 0
