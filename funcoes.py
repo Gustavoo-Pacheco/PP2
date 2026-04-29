@@ -74,3 +74,20 @@ def calcula_pontos_sequencia_baixa(dados):
             return 15
     return 0
 
+def calcula_pontos_full_house(dados):
+    contagens = {}
+    for d in dados:
+        if d in contagens:
+            contagens[d] +=1
+        else:
+            contagens[d] = 1
+    
+    valores = contagens.values()
+
+    if 3 in valores and 2 in valores:
+        total = 0
+        for d in dados:
+            total += d
+        return total
+    else:
+        return 0
